@@ -1,54 +1,63 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Compras</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <a href= styles.css></a> 
-    <a href= design.css></a>
-    <a href= script.js></a>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Header -->
     <header class="header">
-        <a href= "index.html">
-            <img src= "logo.png" alt= "Quicklist">
+        <a href="index.html">
+            <img src="images/logo.png" alt="Quicklist">
         </a>
     </header>
+    <main class="main">
+        <a href="#" class="link">&lt;- Voltar</a>
 
-    <!-- Main Content -->
-    <main class= "main">
-        <a href= "#" class="link"> &lt;- Voltar</a>
-        <h1 class= "title">Compras da semana</h1>
-
-        <!-- Formulario -->
-        <form class= "main__add-purchase">
+        <h1 class="title">Compras da semana</h1>
+        <form class="main__add-purchase">
             <input 
-                class= "input js-inputPurchase" 
-                type= "text" 
-                placeholder= "Adicione um novo item"
+                class="input js-inputPurchase" 
+                type="text" 
+                placeholder="Adicione um novo item"
             >
-            <button type= "button" class="label js-buttonAddItem" >Adicionar item</button>
+            <button type="button" class="label js-buttonAddItem">Adicionar item</button>
         </form>
+        
+        <section id="selected-items">
+            <h2>Itens Selecionados</h2>
+        </section>        
+        
+        <section class="main__container js-containerPurchase">
 
-        <!-- Lista de Compras -->
-        <section class= "main__container js-containerPurchase" ></section>
-
-        <!-- Notificação -->
-        <aside class= "main__notification js-notificationDelete">
+        </section>
+        <aside class="main__notification js-notificationDelete">
             <div>
-                <img src= "src/Images/Warning.svg" alt="Aviso!">
-                <p class= "label">O item foi removido da lista</p>
+                <img src="images/Atenção.png" alt="Aviso!">
+                <p class="label">O item foi removido da lista</p>
             </div>
-            <img src= "src/Images/Delete.svg" alt="Fechar" onclick="notificationDelete(event)">
+            <img src="/images/delete.png" alt="Fechar" 
+            onclick="notificationDelete(event)">
         </aside>
     </main>
+    <aside id="notification" class="notification">
+        <p>O item foi removido da lista</p>
+    </aside>
 
-    <!-- Script -->
-    <script src= "script.js"></script>
+    <footer class="footer">
+        <p>Conecte-se comigo:</p>
+        <div class="social-links">
+            <a href="https://github.com/seu-usuario" target="_blank">
+                <img src="images/github.png" alt="GitHub">
+            </a>
+            <a href="https://linkedin.com/in/seu-usuario" target="_blank">
+                <img src="images/linkedin.png" alt="LinkedIn">
+            </a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

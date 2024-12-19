@@ -1,0 +1,229 @@
+/* Reset Geral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f5fb;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.header img {
+    width: 150px;
+}
+
+.main {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+}
+
+.title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+    color: #374151;
+    margin-bottom: 20px;
+}
+
+.input {
+    width: 70%;
+    padding: 10px;
+    border: 2px solid #d1d5db;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    font-weight: 400;
+    color: #374151;
+}
+
+.input:focus {
+    outline: none;
+    border-color: #ca3884;
+}
+
+.label {
+    font-family: 'Poppins', sans-serif;
+    padding: 10px 20px;
+    background-color: #ca3884;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    font-weight: 600;
+}
+
+.label:hover {
+    background-color: #a52c6b;
+}
+
+.main__container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.container__purchase {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 10px; /* Apenas espaçamento lateral */
+    border-radius: 5px; /* Ajuste do raio da borda */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container__purchase p {
+    font-size: 1rem;
+    margin: 0; /* Remove margem ao redor do texto */
+    padding: 0; /* Remove espaçamento interno */
+}
+
+
+.container__purchase img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.container__purchase img:hover {
+    transform: scale(1.2);
+}
+
+.main__notification {
+    display: none;
+    background-color: #c93847;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.main__notification.active {
+    display: block;
+}
+
+#selected-items {
+    margin-top: 20px;
+    padding: 8px; /* Reduz o espaço interno */
+    background-color: #ffffff;
+    border-radius: 1.5rem; /* Suaviza as bordas */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 300px; /* Limita a largura */
+    width: 70%; /* Garante responsividade */
+    margin: 20px auto; /* Centraliza no container */
+}
+
+#selected-items h2 {
+    font-size: 1.5rem; /* Reduz o tamanho do texto */
+    font-weight: bold;
+    text-align: center;
+    color: #374151;
+    margin-bottom: 10px; /* Adiciona espaçamento abaixo */
+}
+
+#selected-list {
+    list-style: none; /* Remove os marcadores da lista */
+    padding: 0; /* Remove padding interno */
+    margin: 0; /* Remove margens externas */
+}
+
+#selected-list li {
+    font-size: 1rem;
+    text-align: center;
+    color: #374151;
+    margin-bottom: 5px; /* Espaçamento entre itens */
+    padding: 5px 10px; /* Reduz o espaço interno */
+    border-bottom: 1px solid #d1d5db; /* Linha separadora entre itens */
+}
+
+#selected-list li:last-child {
+    border-bottom: none; /* Remove a linha do último item */
+}
+
+
+.notification {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #c93847;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    animation: fadeInOut 3s forwards;
+}
+
+/* Animação para aparecer e desaparecer */
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, 20px);
+    }
+    10%,
+    90% {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, 20px);
+    }
+}
+
+.footer p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    color: #374151;
+    margin-bottom: 10px;
+    font-weight: 600; /* Deixa o texto mais destacado */
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-links a {
+    text-decoration: none;
+}
+
+.social-links img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.2s;
+}
+
+.social-links img:hover {
+    transform: scale(1.2);
+}
